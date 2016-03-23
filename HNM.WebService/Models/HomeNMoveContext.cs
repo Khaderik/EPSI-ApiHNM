@@ -22,7 +22,7 @@ namespace HNM.WebService.Models
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Service> Services { get; set; }
         public DbSet<ServiceChoisi> ServiceChoisis { get; set; }
-        public DbSet<ServicePropose> ServiceProposes { get; set; }azdsqsfsdgdgqfzdq:dnQ
+        public DbSet<ServicePropose> ServiceProposes { get; set; }
         public DbSet<Utilisateur> Utilisateurs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
