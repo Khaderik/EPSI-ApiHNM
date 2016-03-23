@@ -36,5 +36,6 @@ namespace HNM.WebService.Models
             modelBuilder.Configurations.Add(new ServiceProposeMap());
             modelBuilder.Configurations.Add(new UtilisateurMap());
         }
+        petit test de modif synchro
     }
 }
