@@ -39,6 +39,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -113,7 +121,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -153,6 +160,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Adresse.cs" />
+    <Compile Include="Models\Chambre.cs" />
+    <Compile Include="Models\HomeNMoveContext.cs" />
+    <Compile Include="Models\Mapping\AdresseMap.cs" />
+    <Compile Include="Models\Mapping\ChambreMap.cs" />
+    <Compile Include="Models\Mapping\NuitMap.cs" />
+    <Compile Include="Models\Mapping\ReservationMap.cs" />
+    <Compile Include="Models\Mapping\ServiceChoisiMap.cs" />
+    <Compile Include="Models\Mapping\ServiceMap.cs" />
+    <Compile Include="Models\Mapping\ServiceProposeMap.cs" />
+    <Compile Include="Models\Mapping\UtilisateurMap.cs" />
+    <Compile Include="Models\Nuit.cs" />
+    <Compile Include="Models\Reservation.cs" />
+    <Compile Include="Models\Service.cs" />
+    <Compile Include="Models\ServiceChoisi.cs" />
+    <Compile Include="Models\ServicePropose.cs" />
+    <Compile Include="Models\Utilisateur.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
