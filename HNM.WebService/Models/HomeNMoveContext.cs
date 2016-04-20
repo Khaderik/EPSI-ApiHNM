@@ -14,17 +14,16 @@ namespace HNM.WebService.Models
         public HomeNMoveContext()
             : base("Name=HomeNMoveContext")
         {
-            //sdfsdfdsfdsfsd
         }
 
-        public DbSet<Adresse> Adresses { get; set; }
-        public DbSet<Chambre> Chambres { get; set; }
-        public DbSet<Nuit> Nuits { get; set; }
-        public DbSet<Reservation> Reservations { get; set; }
-        public DbSet<Service> Services { get; set; }
-        public DbSet<ServiceChoisi> ServiceChoisis { get; set; }
-        public DbSet<ServicePropose> ServiceProposes { get; set; }
-        public DbSet<Utilisateur> Utilisateurs { get; set; }
+        public IDbSet<Adresse> Adresses { get; set; }
+        public IDbSet<Chambre> Chambres { get; set; }
+        public IDbSet<Nuit> Nuits { get; set; }
+        public IDbSet<Reservation> Reservations { get; set; }
+        public IDbSet<Service> Services { get; set; }
+        public IDbSet<ServiceChoisi> ServiceChoisis { get; set; }
+        public IDbSet<ServicePropose> ServiceProposes { get; set; }
+        public IDbSet<Utilisateur> Utilisateurs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

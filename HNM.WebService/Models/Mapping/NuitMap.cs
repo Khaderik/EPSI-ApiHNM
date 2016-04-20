@@ -22,6 +22,7 @@ namespace HNM.WebService.Models.Mapping
             this.ToTable("Nuit");
             this.Property(t => t.IdNuit).HasColumnName("IdNuit");
             this.Property(t => t.IdChambre).HasColumnName("IdChambre");
+            this.Property(t => t.IdReservation).HasColumnName("IdReservation");
             this.Property(t => t.DateNuit).HasColumnName("DateNuit");
             this.Property(t => t.DispoVisite).HasColumnName("DispoVisite");
 
@@ -29,6 +30,9 @@ namespace HNM.WebService.Models.Mapping
             this.HasRequired(t => t.Chambre)
                 .WithMany(t => t.Nuits)
                 .HasForeignKey(d => d.IdChambre);
+            this.HasOptional(t => t.Reservation)
+                .WithMany(t => t.Nuits)
+                .HasForeignKey(d => d.IdReservation);
 
         }
     }

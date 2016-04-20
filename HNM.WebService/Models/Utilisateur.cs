@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
@@ -12,6 +13,7 @@ namespace HNM.WebService.Models
         }
 
         public int IdUtilisateur { get; set; }
+        [JsonIgnore]
         public int IdAdresse { get; set; }
         public string Pseudo { get; set; }
         public string Nom { get; set; }
@@ -19,7 +21,9 @@ namespace HNM.WebService.Models
         public string AdresseMail { get; set; }
         public System.DateTime DateNaissance { get; set; }
         public virtual Adresse Adresse { get; set; }
+        [JsonIgnore]
         public virtual ICollection<Chambre> Chambres { get; set; }
+        [JsonIgnore]
         public virtual ICollection<Reservation> Reservations { get; set; }
     }
 }
