@@ -21,7 +21,6 @@ namespace HNM.WebService.Models
         public IDbSet<Nuit> Nuits { get; set; }
         public IDbSet<Reservation> Reservations { get; set; }
         public IDbSet<Service> Services { get; set; }
-        public IDbSet<ServiceChoisi> ServiceChoisis { get; set; }
         public IDbSet<ServicePropose> ServiceProposes { get; set; }
         public IDbSet<Utilisateur> Utilisateurs { get; set; }
 
@@ -32,10 +31,8 @@ namespace HNM.WebService.Models
             modelBuilder.Configurations.Add(new NuitMap());
             modelBuilder.Configurations.Add(new ReservationMap());
             modelBuilder.Configurations.Add(new ServiceMap());
-            modelBuilder.Configurations.Add(new ServiceChoisiMap());
             modelBuilder.Configurations.Add(new ServiceProposeMap());
             modelBuilder.Configurations.Add(new UtilisateurMap());
         }
-        petit test de modif synchro
     }
 }

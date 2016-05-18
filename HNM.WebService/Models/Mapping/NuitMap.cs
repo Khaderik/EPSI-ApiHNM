@@ -27,6 +27,15 @@ namespace HNM.WebService.Models.Mapping
             this.Property(t => t.DispoVisite).HasColumnName("DispoVisite");
 
             // Relationships
+            this.HasMany(t => t.ServiceChoisis)
+                .WithMany(t => t.Nuits)
+                .Map(m =>
+                    {
+                        m.ToTable("ServiceChoisi");
+                        m.MapLeftKey("IdNuit");
+                        m.MapRightKey("IdServicePropose");
+                    });
+
             this.HasRequired(t => t.Chambre)
                 .WithMany(t => t.Nuits)
                 .HasForeignKey(d => d.IdChambre);

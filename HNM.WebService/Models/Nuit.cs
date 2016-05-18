@@ -6,6 +6,11 @@ namespace HNM.WebService.Models
 {
     public partial class Nuit
     {
+        public Nuit()
+        {
+            this.ServiceChoisis = new List<ServicePropose>();
+        }
+
         public int IdNuit { get; set; }
         [JsonIgnore]
         public int IdChambre { get; set; }
@@ -16,5 +21,6 @@ namespace HNM.WebService.Models
         public virtual Chambre Chambre { get; set; }
         [JsonIgnore]
         public virtual Reservation Reservation { get; set; }
+        public virtual ICollection<ServicePropose> ServiceChoisis { get; set; }
     }
 }
